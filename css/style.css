@@ -11,7 +11,30 @@ body {
     color: #232323;
     font-family: 'Open Sans', sans-serif;
 }
-
+#details{
+    border-left: solid 2px #FFFAFA;
+    height: 100%;
+}
+#details>span{
+    width: auto;
+    display: inline-block;
+}
+#details>span>span{
+    width: auto;
+    display: inline-block;
+    font-size: 18px;
+    color: #FFFAFA;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    padding: 10px 20px;
+    display: inline-block;
+    border: solid 2px #FFFAFA;
+    box-sizing: border-box;
+    text-align: center;
+}
+div>span>img{
+    width: 30%;
+}
 .navtab{
     padding: 40px 0px;
     background: rgba(256,256,256, 0.1);

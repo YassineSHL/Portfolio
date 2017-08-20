@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="myApp">
+<html ng-app="myAppX">
 
 <head>
     <meta charset="utf-8">
@@ -9,24 +9,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--library-->
     <script src="js/library/angular.min.js"></script>
-    <script src="js/library/1.5.0_angular-route.js"></script>
-    <script src="js/library/1.5.0_angular-animate.js"></script>
-    <script src="js/library/1.0.0_angular-ui-router.min.js"></script>
-    <script src="js/library/ui-bootstrap-tpls-1.1.2.js"></script>
-    <script src="js/library/angular-modal-service.js"></script>
-    <script src="js/library/angular-messages.min.js"></script>
-    <script src="js/library/underscore-min.js"></script>
     <!--APP LOAD-->
     <script src="js/app.js"></script>
     <!--SERVICES-->
-    <!--     <script src="js/services/localStorage.service.js"></script>
- -->
     <!--CONTROLLERS-->
-    <!--     <script src="js/controllers/login.controller.js"></script>
- -->
 </head>
 
-<body>
+<body ng-controller="ctrlX">
     <div class="content" id="about">
         <div class="navtab">
             <a href="#about">About</a>
@@ -66,48 +55,89 @@
     </div>
     <div class="center" id="skills">
         <h1 class="boxed_item_main bold_title">my<span class="ital_title">Skills</span></h1>
-        <div class="center">
-            *Programming Languages:
-            </span>
-            <br/>
+        <br style="clear: both;">
+        <div class="center" ng-class="{'col-md-6': showDetails}">
             <img src="images/html.png">
             <img src="images/css.png">
             <img src="images/bootstrap.png">
-            <br style="clear: both;" />
+            <br/>
             <!--<img src="images/javascript.png">-->
             <img src="images/angular.png">
             <img src="images/jquery.png">
             <img src="images/grunt.png">
-            <br style="clear: both;" />
+            <br/>
             <img src="images/php.png">
             <img src="images/node.png">
             <img src="images/mysql.png"> </span>
             <br style="clear: both;" />
+            <br/>
+            <button class="btn btn-info" ng-if="!showDetails" ng-click="showDetail()">Show details</button>
+            <button class="btn btn-info" ng-if="showDetails" ng-click="showDetail()">Hide details</button>
+            <br style="clear: both;" />
+            <br/>
         </div>
+        <div id="details" ng-show="showDetails" ng-class="{'col-md-6': showDetails}">
+            <span>
+            <img src="images/html.png"> <span>4,5/5</span>   
+            </span>
+            <span>
+            <img src="images/css.png"> <span>3,5/5</span>
+            </span>
+            <br/>
+            <span>
+            <img src="images/bootstrap.png"> <span>3,5/5</span>
+            </span>
+            <!--<img src="images/javascript.png">-->
+            <span>
+            <img src="images/angular.png"> <span>3,5/5</span>
+            </span>
+            <br/>
+            <span>
+            <img src="images/jquery.png"> <span>3,0/5</span>
+            </span>
+            <span>
+            <img src="images/grunt.png"> <span>1,0/5</span>
+            </span>
+            <br/>
+            <span>
+            <img src="images/php.png"> <span>2,0/5</span>
+            </span>
+            <span>
+            <img src="images/node.png"> <span>1,0/5</span>
+            </span>
+            <br/>
+            <span>
+            <img src="images/mysql.png"> <span>4,0/5</span>
+            </span>
+            <br style="clear: both;" />
+            <br/>
+        </div>
+        <br style="clear: both;" />
     </div>
     <div class="col-md-10 col-md-offset-1 thumbnail" id="contact">
         <div class="center">
             <h1 class="boxed_item_main_black bold_title">my<span class="ital_title">Contact</span></h1>
         </div>
-        <div class="col-md-3 center thumbnail">
+        <div class="col-md-3 center">
             <a href="https://www.xing.com/profile/Yassine_Souhal" class="link"><img src="images/xing.png">
             </a>
         </div>
-        <div class="col-md-3 center thumbnail">
+        <div class="col-md-3 center">
             <a href="https://www.linkedin.com/in/yassine-souhal-44949876" class="link"><img src="images/linkedin.png"></a>
         </div>
-        <div class="col-md-3 center thumbnail infos">
+        <div class="col-md-3 center infos">
             <img src="images/gmail.png">
             <div class="overlay">
                 <h5><span class="ital_title">Yassine.souhal@gmail.com</span></h5>
             </div>
         </div>
-        <div class="col-md-3 center thumbnail infos">
+        <div class="col-md-3 center infos">
             <img src="images/phone.png">
             <div class="overlay center">
                 <h5><span class="ital_title">(+49)0151-71032999</span></h5>
             </div>
         </div>
+        <br style="clear: both;" />
     </div>
     </div>
 </body>
