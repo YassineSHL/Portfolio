@@ -11,6 +11,11 @@ body {
     color: #232323;
     font-family: 'Open Sans', sans-serif;
 }
+.apostrophe{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 256px;
+    padding-bottom: -256px;
+}
 #details{
     border-left: solid 2px #FFFAFA;
     height: 100%;
@@ -50,15 +55,18 @@ div>span>img{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    font-weight: bolder;
     color: #FFFAFA;
     border: solid 2px #FFFAFA;
     border-radius: 0px;
 }
 .navtab>a:hover {
     text-decoration: none;
-    padding: 5px 20px;
-    background: #FFFAFA;
-    color: #333333;
+    /*padding: 5px 20px;*/
+    background: #92CD00;
+    border: solid 2px #92CD00;
+    color: #FFFAFA;
+    /*color: #333333;*/
 
 }
 
